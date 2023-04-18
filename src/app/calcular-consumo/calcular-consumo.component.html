@@ -38,7 +38,7 @@
     </div>
     <div class="col-md-6">
         <label for="inputState" class="form-label">Selecione a quantidade de COMPUTADORES</label>
-        <select name="numTV" class="form-select">
+        <select name="numPC" class="form-select">
           <option selected>1</option>
           <option>2</option>
           <option>3</option>
@@ -47,11 +47,11 @@
         </select>
     </div>
     <div class="col-12">
-        <label for="numMoradores " class="form-label">Digite o valor da TARIFA ENERGÉTICA em R$</label>
+        <label for="valorTarifa" class="form-label">Digite o valor da TARIFA ENERGÉTICA em R$</label>
         <input type="number" class="form-control" name="numMoradores">
       </div>
     <div class="d-grid gap-2">
-        <button type="submit" class="btn btn-warning" name="">Clique aqui para CALCULAR</button>
+        <button type="submit" class="btn btn-warning" (click)="calcular()">Clique aqui para CALCULAR</button>
     </div>
     <div class="input-group">
       <span class="input-group-text">CONSUMO ELÉTRICO</span>
