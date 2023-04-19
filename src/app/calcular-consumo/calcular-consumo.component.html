@@ -1,65 +1,67 @@
 <div class="mx-auto p-2" style="width: 700px;">
 <form class="row g-3">
   <div style="margin-top: 70px;">
-    <h2 style="text-align: center; margin-bottom: 30px;">Cálculo de Consumo Energético &#x26A1;</h2>
+    <h2 style="text-align: center; margin-bottom: 30px;">Cálculo de Consumo de Energia &#x26A1;</h2>
     <hr>
   </div>
     <div class="col-md-6">
       <label for="numMoradores " class="form-label">Digite a quantidade de MORADORES</label>
-      <input type="number" class="form-control" name="numMoradores">
+      <input type="number" [(ngModel)]="numMoradores" class="form-control" name="numMoradores">
     </div>
     <div class="col-md-6">
       <label for="numComodos" class="form-label">Digite a quantidade de CÔMODOS</label>
-      <input type="number" class="form-control" name="numComodos">
+      <input type="number" [(ngModel)]="numComodos" class="form-control" name="numComodos">
     </div>
     <div class="col-md-6">
-        <label for="numMaquina" class="form-label">Utilizam uma MÁQUINA DE LAVAR ROUPAS?</label>
-        <select name="numMaquina" class="form-select">
-          <option selected>Sim</option>
-          <option>Não</option>
+        <label for="temMaquina" class="form-label">Utilizam uma MÁQUINA DE LAVAR ROUPAS?</label>
+        <select [(ngModel)]="temMaquina" name="temMaquina" class="form-select">
+          <option [ngValue]="'Sim'">Sim</option>
+          <option [ngValue]="'Não'">Não</option>
         </select>
       </div>
       <div class="col-md-6">
-        <label for="numSecadora" class="form-label">Utilizam uma SECADORA DE ROUPAS?</label>
-        <select name="numSecadora" class="form-select">
-          <option selected>Sim</option>
-          <option>Não</option>
+        <label for="temSecadora" class="form-label">Utilizam uma SECADORA DE ROUPAS?</label>
+        <select [(ngModel)]="temSecadora" name="temSecadora" class="form-select">
+          <option [ngValue]="'Sim'">Sim</option>
+          <option [ngValue]="'Não'">Não</option>
         </select>
       </div>
     <div class="col-md-6">
       <label for="inputState" class="form-label">Selecione a quantidade de TV's</label>
-      <select name="numTV" class="form-select">
-        <option selected>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
+      <select [(ngModel)]="numTV" name="numTV" class="form-select">
+        <option [ngValue]="0">0</option>
+        <option [ngValue]="1">1</option>
+        <option [ngValue]="2">2</option>
+        <option [ngValue]="3">3</option>
+        <option [ngValue]="4">4</option>
+        <option [ngValue]="5">5</option>
       </select>
     </div>
     <div class="col-md-6">
         <label for="inputState" class="form-label">Selecione a quantidade de COMPUTADORES</label>
-        <select name="numPC" class="form-select">
-          <option selected>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+        <select [(ngModel)]="numPC" name="numPC" class="form-select">
+          <option [ngValue]="0">0</option>
+          <option [ngValue]="1">1</option>
+          <option [ngValue]="2">2</option>
+          <option [ngValue]="3">3</option>
+          <option [ngValue]="4">4</option>
+          <option [ngValue]="5">5</option>
         </select>
     </div>
     <div class="col-12">
         <label for="valorTarifa" class="form-label">Digite o valor da TARIFA ENERGÉTICA em R$</label>
-        <input type="number" class="form-control" name="numMoradores">
+        <input type="number" [(ngModel)]="valorTarifa" class="form-control" name="valorTarifa">
       </div>
     <div class="d-grid gap-2">
         <button type="submit" class="btn btn-warning" (click)="calcular()">Clique aqui para CALCULAR</button>
     </div>
     <div class="input-group">
       <span class="input-group-text">CONSUMO ELÉTRICO</span>
-      <input type="number" class="form-control" readonly name="consumoEletrico">
+      <input type="number" [value]="consumoEletrico" class="form-control" readonly name="consumoEletrico" style="text-align: end;">
     </div>
     <div class="input-group">
       <span class="input-group-text">VALOR DA CONTA MENSAL</span>
-      <input type="number" class="form-control" readonly name="valorConta">
+      <input type="number" [value]="valorConta" class="form-control" readonly name="valorConta" style="text-align: end;">
     </div>
 </form>
 </div>
