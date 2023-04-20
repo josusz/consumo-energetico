@@ -1,7 +1,7 @@
 <div class="mx-auto p-2" style="width: 700px;">
 <form class="row g-3">
   <div style="margin-top: 70px;">
-    <h2 style="text-align: center; margin-bottom: 30px;">Cálculo de Consumo de Energia &#x26A1;</h2>
+    <h2 style="text-align: center; margin-bottom: 30px;">Simulador de Consumo de Energia &#x26A1;</h2>
     <hr>
   </div>
     <div class="col-md-6">
@@ -49,7 +49,7 @@
         </select>
     </div>
     <div class="col-12">
-        <label for="valorTarifa" class="form-label">Digite o valor da TARIFA ENERGÉTICA em R$</label>
+        <label for="valorTarifa" class="form-label">Digite o valor da TARIFA ENERGÉTICA de 1kWh em R$</label>
         <input type="number" [(ngModel)]="valorTarifa" class="form-control" name="valorTarifa">
       </div>
     <div class="d-grid gap-2">
@@ -58,9 +58,10 @@
     <div class="input-group">
       <span class="input-group-text">CONSUMO ELÉTRICO</span>
       <input type="number" [value]="consumoEletrico" class="form-control" readonly name="consumoEletrico" style="text-align: end;">
+      <span class="input-group-text">kWh/mês</span>
     </div>
     <div class="input-group">
-      <span class="input-group-text">VALOR DA CONTA MENSAL</span>
+      <span class="input-group-text">VALOR DA CONTA MENSAL EM R$</span>
       <input type="number" [value]="valorConta" class="form-control" readonly name="valorConta" style="text-align: end;">
     </div>
 </form>

@@ -17,13 +17,14 @@ export class CalcularConsumoComponent {
   valorConta: number=0;
 
   calcular(){
-        const consumoChuveiro = (this.numMoradores * 4) / 2;
+        const consumoChuveiro = (this.numMoradores * 3.5) * (10 / 60);
+        const consumoLampada = (this.numComodos * 0.01) * 8;
         const consumoMaquina = this.temMaquina === "Sim" ? 0.70 : 0;
         const consumoSecadora = this.temSecadora === "Sim" ? 4 : 0;
-        const consumoTV = this.numTV * 13.5;
-        const consumoPC = this.numPC * 0.60; 
+        const consumoTV = this.numTV * 0.12;
+        const consumoPC = this.numPC * 0.6; 
     
-        const consumoTotal = consumoChuveiro + consumoMaquina + consumoSecadora + consumoTV + consumoPC;
+        const consumoTotal = consumoChuveiro + consumoLampada + consumoMaquina + consumoSecadora + consumoTV + consumoPC;
     
         const consumoMensal = consumoTotal * 30;
     
